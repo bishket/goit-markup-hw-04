@@ -25,6 +25,11 @@ h6,
 p {
   margin-top: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .list {
   list-style: none;
@@ -208,23 +213,25 @@ p {
   letter-spacing: 0.06em;
 
   border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 32px;
   border-radius: 4px;
 }
 /* Особенности */
 
-.features-icon {
+.features-list {
+  display: flex;
+}
+
+.features-list-item {
   width: 270px;
+}
+.features-box {
   height: 120px;
   background: var(--background-button);
   border-radius: 4px;
   margin-bottom: 30px;
-  padding: 25px 100px;
-}
-
-.features .list {
   display: flex;
+  justify-content: center;
 }
 .features .list li:not(:last-child) {
   margin-right: 30px;
@@ -317,6 +324,10 @@ p {
   width: 20px;
   height: 20px;
 }
+.social-link:hover .team-social-link-icon,
+.social-link:focus .team-social-link-icon {
+  fill: var(--background-basic);
+}
 
 /* Постоянные клиенты */
 
@@ -390,10 +401,10 @@ p {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .cta {
-  margin-top: 12px;
   margin-left: 70px;
 }
 
@@ -441,7 +452,7 @@ p {
 }
 .filters .button {
   display: inline-block;
-
+  cursor: pointer;
   color: var(--title-color);
   background-color: var(--background-button);
 
@@ -468,10 +479,12 @@ p {
 .filters .button:focus {
   color: var(--background-basic);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .filters .button.active {
   color: var(--background-basic);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* разделы портфолио*/
 .portfolio-list .cart-thumb {
@@ -507,4 +520,10 @@ p {
 }
 .portfolio-list .portfolio-items:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+.portfolio-items:hover,
+.portfolio-items:focus {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
