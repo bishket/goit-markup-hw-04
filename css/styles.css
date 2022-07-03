@@ -232,6 +232,7 @@ img {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .features .list li:not(:last-child) {
   margin-right: 30px;
